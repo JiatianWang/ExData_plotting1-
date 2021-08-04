@@ -1,0 +1,5 @@
+plot(Global_active_power ~ Date_time, data_new, type = "l",
+     ylab = "Global Active Power (kilowatts)",
+     xlab = NA)
+# save 
+dev.copy(png,"plot2.png", width = 480, height = 480 )
