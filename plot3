@@ -1,0 +1,11 @@
+
+# plot 3 
+with(data_new, {
+  plot(Date_time, Sub_metering_1,type = "l",
+       ylab="Global Active Power (kilowatts)", xlab="")
+  lines(Date_time, Sub_metering_2, col = 'red')
+  lines(Date_time, Sub_metering_3, col = 'blue')
+})
+
+legend("topright",lty=1, lwd=2,col=c("black","blue","red"),c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+dev.copy(png,"plot3.png", width = 480, height = 480 )
